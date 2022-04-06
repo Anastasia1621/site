@@ -1,0 +1,89 @@
+*, *:after, *:before{
+box-sizing: border-box;
+}
+body{
+    font: size 40px; ;
+    background-color: black;
+
+}
+.container{
+    width: 90%;
+    margin: 0px auto;
+}
+.containt_image{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image{
+    width: 30%;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.image:nth-child(1){
+    background-image: url(img\project1.png ); 
+}
+.image:nth-child(2){
+    background-image: url(img\project2.png);
+} 
+
+.image:nth-child(3){
+    background-image: url(img\project3.png);
+}
+.image:nth-child(1)::before{
+    content: "My Progect";
+    background-color: plum;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+.image:nth-child(1):hover::before{
+  top: 0px;
+}
+.image:nth-child(2)::before{
+    content: "My Progect";
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 0%;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+.image:nth-child(2):hover::before{
+  top: 0px;
+}
+.image:nth-child(3)::before{
+    content: "My Progect";
+    background-color: rgb(226, 143, 143);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+.image:nth-child(3):hover::before{
+  left: 0px;
+}
